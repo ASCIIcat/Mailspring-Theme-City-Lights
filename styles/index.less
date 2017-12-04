@@ -13,7 +13,7 @@ stylesheets can call `@import "ui-variables";` and reference it.
 
 /*
 After changing variables to set a base for our theme, we can use
-specific, narrowly-scoped CSS rules to change other things. 
+specific, narrowly-scoped CSS rules to change other things.
 
 Tip: You can use the Developer Tools in Mailspring and "Inspect
 Element" to identify the DOM elements and styles you want to override.
@@ -26,6 +26,12 @@ background color.)
 .sheet-toolbar {
   border-bottom: 1px solid @border-color-divider;
   box-shadow: none;
+}
+
+.list-container .list-item.focused {
+    background: @text-color-very-subtle !important;
+    color: @white !important;
+    border-bottom: 1px solid @text-color-very-subtle !important;
 }
 
 .thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
